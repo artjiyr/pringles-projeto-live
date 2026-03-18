@@ -1,5 +1,6 @@
-//MAPEAR AS COISAS Q SERÃO INTERATIVAS
+ gsap.registerPlugin(SplitText)
 
+//MAPEAR AS COISAS Q SERÃO INTERATIVAS
 const latasMenores = document.querySelectorAll(".latas img:nth-child(2)");
 
 const slides = document.querySelectorAll(".slide");
@@ -23,6 +24,16 @@ latasMenores.forEach(LataMenor=> {
         
         slides[contador].classList.add("active")
         
-    }
+    };
+});
+
+const split = SplitText.create(".conteudo h2", {
+    type: "chars",
+    mask: "chars"
 })
 
+gsap.from(split.chars, {
+    y: 80,
+    stagger: .05,
+    opacity: 0
+})
