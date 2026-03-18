@@ -105,7 +105,7 @@ nav li{
 
     .slide.active {
         opacity: 1;
-        clip-path: circle(100vw at 89% 50%);
+        clip-path: circle(140vw at 89% 50%);
     }
 
     .slide:nth-child(2) {
